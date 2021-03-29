@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:junckers_el="clr-namespace:Junckers_el" 
+             x:Class="Junckers_el.Standarder"
+             xmlns:Local="clr-namespace:Junckers_el" >
+
+
+
+
+    <ContentPage.BindingContext>
+
+        <Local:KabelListViewModel/>
+
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="LvKabler" ItemsSource="{Binding Kabler}" Margin="5">
+                <ListView.Header>
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Text="Kabler/Ledninger" Grid.Column="0" Grid.Row="0"  FontAttributes="Bold" BackgroundColor="LightGray"/>
+                        <Label Text="L:+" Grid.Column="1" Grid.Row="0"  FontAttributes="Bold" BackgroundColor="LightGray" />
+                        <Label Text="N:-" Grid.Column="2" Grid.Row="0"  FontAttributes="Bold" BackgroundColor="LightGray"/>
+                    </Grid>
+                </ListView.Header>
+               
+
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+
+                                <!--<Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>-->
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+
+
+                                </Grid.ColumnDefinitions>
+                                
+                                
+
+                                    <Label Text="{Binding KabelName}"                                     
+                                           FontSize="Medium"
+                                           FontAttributes="Bold"
+                                          
+                                           
+                                           Grid.Column="0"
+                                           
+                                      HorizontalTextAlignment="Start"    
+                                       VerticalTextAlignment="Start"></Label>
+
+                                    <Label Text="{Binding FavekodeFase}"
+                                           Grid.Column="1"
+                                         
+                                       
+                                       VerticalTextAlignment="Center"></Label>
+
+                                    <Label Text="{Binding FarvekodeNul}"
+                                           Grid.Column="2"
+                                       
+                                       VerticalTextAlignment="Center"></Label>
+
+
+
+
+
+
+                            </Grid>
+                        
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+                
+                
+                
+                
+            </ListView>
+                        
+        </StackLayout>
+                        
+    </ContentPage.Content>
+</ContentPage>   
+
+       
+
+
+      
+
+
+       
+
+            
+             
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--<ListView.ItemsSource >
+               
+                <x:Array Type="{x:Type x:String}">
+                        <x:String>400V/230V(AC)Fase/+ Sort: Null/-: Lyseblå</x:String>
+                        <x:String>Svagstrøm 24V(AC) Fase/+: Rød  Null/-: Lysegrå</x:String>
+                        <x:String>Svagstrøm 24V(DC) Fase/+ Orange  Null/-: Grå</x:String>
+                        <x:String>Fremmed styrspænding Fase/+ Brun: Null/-: Brun</x:String>
+                        <x:String>Analog signaler Fase/+ Violet: Null/-: Violet</x:String>
+                        <x:String>Sikkerhedskredse/Nødstop Fase/+ Hvid: Null/-: Hvid</x:String>
+                        <x:String>Egensikkekreds (EX) Fase/+ Mørkeblå: Null/-: Mørkeblå</x:String>
+                        <x:String>PE: Grøn/Gul</x:String>
+                    </x:Array>
+              
+            </ListView.ItemsSource>-->
+            
+
+
+
+
+
+
+            <!--BackgroundColor="Transparent"
+                  HasUnevenRows="True"
+                  SeparatorColor="Blue"
+                  SeparatorVisibility="None"
+                  CachingStrategy="RecycleElement"
+                  ItemSelected="ListView_ItemSelected"
+                  ItemTapped="ListView_ItemTapped" >-->
+
+
+
+            <!--<ListView.ItemsSource>
+
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>400V/230V(AC)Fase/+ Sort: Null/-: Lyseblå</x:String>
+                    <x:String>Svagstrøm 24V(AC) Fase/+: Rød  Null/-: Lysegrå</x:String>
+                    <x:String>Svagstrøm 24V(DC) Fase/+ Orange  Null/-: Grå</x:String>
+                    <x:String>Fremmed styrspænding Fase/+ Brun: Null/-: Brun</x:String>
+                    <x:String>Analog signaler Fase/+ Violet: Null/-: Violet</x:String>
+                    <x:String>Sikkerhedskredse/Nødstop Fase/+ Hvid: Null/-: Hvid</x:String>
+                    <x:String>Egensikkekreds (EX) Fase/+ Mørkeblå: Null/-: Mørkeblå</x:String>
+                    <x:String>PE: Grøn/Gul</x:String>
+                </x:Array>
+            </ListView.ItemsSource>-->
+
+
+            <!--<ListView.ItemTemplate>
+            
+
+
+                <DataTemplate>
+                    <TextCell Text="{Binding .}"/>
+                    <ImageCell Text="{Binding .}"
+                               Detail="{Binding .}"/>
+                    <SwitchCell Text="{Binding .}"/>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Add"/>
+                            <MenuItem Text="Bad"/>
+                              
+                        </ViewCell.ContextActions>
+                        
+                        <Grid Padding="10">
+                            <Frame>
+                                <Label VerticalOptions="Center"
+                                   FontSize="10"
+                                   Text="{Binding Name}"/>
+
+
+                            </Frame>
+                        </Grid>
+                        
+                    </ViewCell>
+
+
+
+
+
+                </DataTemplate>
+                
+            </ListView.ItemTemplate>
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Header"
+                           TextColor="Black"
+                           BackgroundColor="Blue"/>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.Footer>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text=" Fooder"
+                           TextColor="Gray"
+                           BackgroundColor="Blue"/>
+                    <Button Text="Load More" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                </StackLayout>
+            </ListView.Footer>-->
+          
+            
+
+         
+
+
+
+
+
+
+
+
+            <!--<Label Text="Welcome to Standarder!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />-->
+        
+   

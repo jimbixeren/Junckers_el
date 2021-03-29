@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:Junckers_el="clr-namespace:Junckers_el"
+             x:Class="Junckers_el.Tabbed">
+  <!--Pages can be added as references or inline-->
+
+
+    <Junckers_el:Test Title="Test"></Junckers_el:Test>
+    <Junckers_el:Beregninger Title="Dim."></Junckers_el:Beregninger>
+    <Junckers_el:Motor Title="Motor"></Junckers_el:Motor>
+    <Junckers_el:Standarder Title="Standarder"></Junckers_el:Standarder>
+    
+
+
+
+
+
+
+</TabbedPage>

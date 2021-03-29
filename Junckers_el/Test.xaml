@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Junckers_el.Test">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            
+            <!--<Label Text="Isolationstest" HorizontalOptions="CenterAndExpand"></Label>-->
+            <Image x:Name="iconImagessolationsMeggning"
+               Aspect="AspectFit"
+               HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+               HeightRequest="200"
+               Margin="0, 0, 0, 50" />
+
+
+            <!--<Label Text="Rcd" HorizontalOptions="CenterAndExpand"></Label>-->
+            <Image x:Name="iconImagesRcdtest"
+               Aspect="AspectFit"
+               HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+               HeightRequest="200"
+               Margin="0, 0, 0, 50" />
+
+            <!--<Label Text="Supp.Udligningsforbindelses test" HorizontalOptions="CenterAndExpand"></Label>-->
+            <Image x:Name="iconImagesSuppUdligning"
+               Aspect="AspectFit"
+               HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+               HeightRequest="200"
+               Margin="0, 0, 0, 50" />
+            
+            
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
